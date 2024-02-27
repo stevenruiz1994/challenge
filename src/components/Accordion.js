@@ -21,8 +21,10 @@ const AccordionTitle = styled.div`
 `;
 
 const AccordionContent = styled.div`
-  padding: 10px;
-  display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
+  padding: ${({ isOpen }) => (isOpen ? '200px' : '0')};
+  max-height: ${({ isOpen }) => (isOpen ? '200px' : '0')};
+  overflow: hidden;
+  transition: max-height 0.5s ease;
 `;
 
 const Accordion = ({ items }) => {
