@@ -22,27 +22,27 @@ Design an accordion component that allows users to expand and collapse sections 
 
 Skills tested: React component composition, state management
 Difficulty: Easy – Medium
-Tasks:
+### Tasks:
 
-Implement the accordion component UI.
-Ensure only one section can be expanded at a time.
-Add animations for smooth transitions.
-Hints:
+- Implement the accordion component UI.
+- Ensure only one section can be expanded at a time.
+- Add animations for smooth transitions.
+### Hints:
 
-Use React state to track the active section.
-CSS transitions or animations can be used for visual effects.
+- Use React state to track the active section.
+- CSS transitions or animations can be used for visual effects.
 
 ###  7. Image Carousel
 Design an image carousel that allows users to navigate through a collection of images.
 
 Skills tested: React component composition, state management, event handling
 Difficulty: Medium
-Tasks:
+### Tasks:
 
-Implement the image carousel UI.
-Add navigation controls (previous/next).
-Allow users to click on individual images to navigate.
-Hints:
+- Implement the image carousel UI.
+- Add navigation controls (previous/next).
+- Allow users to click on individual images to navigate.
+### Hints:
 
-Use React state to track the current image index.
-Utilize event handlers to handle navigation.
+- Use React state to track the current image index.
+- Utilize event handlers to handle navigation.
