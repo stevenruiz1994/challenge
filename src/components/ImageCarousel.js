@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
+import React, { useState } from "react";
+import styled from "styled-components";
 
 const CarouselContainer = styled.div`
   width: 100%;
@@ -43,11 +43,15 @@ const ImageCarousel = ({ images }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const handlePrevious = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
   };
 
   const handleNext = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+    );
   };
 
   const handleThumbnailClick = (index) => {
@@ -57,22 +61,26 @@ const ImageCarousel = ({ images }) => {
   return (
     <>
       <CarouselContainer>
-      <NavigationButton onClick={handlePrevious}>&#10094;</NavigationButton>
-      <Image src={images[currentImageIndex]}/>
-      <NavigationButton onClick={handleNext}>&#10095;</NavigationButton>
-    </CarouselContainer>
-    <ThumbnailContainer>
+        <NavigationButton onClick={handlePrevious}>&#10094;</NavigationButton>
+        <Image src={images[currentImageIndex]} />
+        <NavigationButton onClick={handleNext}>&#10095;</NavigationButton>
+      </CarouselContainer>
+      <ThumbnailContainer>
         {images.map((image, index) => (
           <ThumbnailImage
             key={index}
             src={image}
             onClick={() => handleThumbnailClick(index)}
-            style={{ border: index === currentImageIndex ? '2px solid blue' : '1px solid #ccc' }}
+            style={{
+              border:
+                index === currentImageIndex
+                  ? "2px solid blue"
+                  : "1px solid #ccc",
+            }}
           />
         ))}
       </ThumbnailContainer>
     </>
-    
   );
 };
 

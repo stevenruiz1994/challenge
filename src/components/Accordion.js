@@ -1,6 +1,6 @@
 // Accordion.js
-import React, { useState } from 'react';
-import styled from 'styled-components';
+import React, { useState } from "react";
+import styled from "styled-components";
 
 const AccordionContainer = styled.div`
   width: 100%;
@@ -21,8 +21,8 @@ const AccordionTitle = styled.div`
 `;
 
 const AccordionContent = styled.div`
-  padding: ${({ isOpen }) => (isOpen ? '200px' : '0')};
-  max-height: ${({ isOpen }) => (isOpen ? '200px' : '0')};
+  padding: ${({ isOpen }) => (isOpen ? "200px" : "0")};
+  max-height: ${({ isOpen }) => (isOpen ? "200px" : "0")};
   overflow: hidden;
   transition: max-height 0.5s ease;
 `;
@@ -40,7 +40,7 @@ const Accordion = ({ items }) => {
         <AccordionItem key={index}>
           <AccordionTitle onClick={() => handleToggle(index)}>
             <span>{item.title}</span>
-            <span>{activeIndex === index ? '-' : '+'}</span>
+            <span>{activeIndex === index ? "-" : "+"}</span>
           </AccordionTitle>
           <AccordionContent isOpen={activeIndex === index}>
             {item.content}
